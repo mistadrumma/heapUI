@@ -1,0 +1,42 @@
+.site-nav {
+  background-color: @header-color ;
+  padding: 30px 0;
+
+  span {
+        font-size: 35px;
+        display: block;
+        color: @font-logo;
+        font-family: "PT Sans Narrow bold";
+      }
+
+  ul {
+    &:extend(.ul-unstyled);
+    float: left;
+    //margin-right: 50px;
+    li {
+      display: inline-block;
+      margin-left: 5px;
+      a {
+        .transition();
+        display: block;
+        color: #ffffff;
+        font-family: Oswald;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 1;
+        text-align: center;
+        //margin-top: (50px - 17px)/2;
+        padding: 23px 23px;
+        &:active {
+          color: @font-logo;
+        }
+        &:hover {
+          color: @font-logo;
+        }
+      }
+
+
+    }
+  }
+}

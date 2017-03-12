@@ -6775,7 +6775,8 @@ button.close {
 .text-uppercase {
   text-transform: uppercase;
 }
-.ul-unstyled {
+.ul-unstyled,
+.site-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -6797,9 +6798,9 @@ button.close {
   font-style: normal;
 }
 @font-face {
-  font-family: 'PT Sans Narrow';
+  font-family: 'PT Sans Narrow bold';
   src: url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.eot');
-  src: url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.woff') format('woff'), url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.ttf') format('truetype'), url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.svg#PT Sans Narrow') format('svg');
+  src: url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.woff') format('woff'), url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.ttf') format('truetype'), url('../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.svg#PT Sans Narrow bold') format('svg');
   font-weight: '600';
   font-style: normal;
 }
@@ -6879,6 +6880,47 @@ button.close {
 }
 .icon-dribbble:before {
   content: "\f17d";
+}
+body {
+  font-family: "PT Sans Narrow";
+  font-size: 14px;
+  line-height: 0.75;
+  background-color: #f1f4f9;
+}
+.site-nav {
+  background-color: #2672a5;
+  padding: 30px 0;
+}
+.site-nav span {
+  font-size: 35px;
+  display: block;
+  color: #f0d87d;
+  font-family: "PT Sans Narrow bold";
+}
+.site-nav ul {
+  float: left;
+}
+.site-nav ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+.site-nav ul li a {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  color: #ffffff;
+  font-family: Oswald;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  text-align: center;
+  padding: 23px 23px;
+}
+.site-nav ul li a:active {
+  color: #f0d87d;
+}
+.site-nav ul li a:hover {
+  color: #f0d87d;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
