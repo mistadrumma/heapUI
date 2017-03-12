@@ -6776,7 +6776,9 @@ button.close {
   text-transform: uppercase;
 }
 .ul-unstyled,
-.site-nav ul {
+.site-nav ul,
+.nav-social ul,
+.nav-search ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -6899,28 +6901,50 @@ body {
 }
 .site-nav ul {
   float: left;
+  margin-left: 15px;
 }
 .site-nav ul li {
   display: inline-block;
-  margin-left: 5px;
 }
 .site-nav ul li a {
   transition: all 0.3s ease-in-out;
   display: block;
   color: #ffffff;
   font-family: Oswald;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1;
   text-align: center;
-  padding: 23px 23px;
+  padding: 24px 24px;
 }
 .site-nav ul li a:active {
   color: #f0d87d;
 }
 .site-nav ul li a:hover {
   color: #f0d87d;
+}
+.nav-social {
+  padding-left: 10px;
+}
+.nav-social ul li {
+  display: inline-block;
+  margin-left: 0px;
+}
+.nav-social ul li a {
+  font-size: 18px;
+  padding: 20px 15px;
+}
+.nav-search ul li {
+  display: inline-block;
+  margin-left: 0px;
+}
+.nav-search ul li a {
+  font-size: 18px;
+  padding: 20px 15px;
+  color: #123f61;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: none;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

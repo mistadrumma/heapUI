@@ -3,40 +3,88 @@
   padding: 30px 0;
 
   span {
-        font-size: 35px;
-        display: block;
-        color: @font-logo;
-        font-family: "PT Sans Narrow bold";
-      }
+    font-size: 35px;
+    display: block;
+    color: @font-logo;
+    font-family: "PT Sans Narrow bold";
+  }
 
   ul {
     &:extend(.ul-unstyled);
     float: left;
+    margin-left: 15px;
     //margin-right: 50px;
     li {
       display: inline-block;
-      margin-left: 5px;
+      //margin-left: 5px;
       a {
         .transition();
         display: block;
         color: #ffffff;
         font-family: Oswald;
-        font-size: 12px;
+        font-size: 10px;
         text-transform: uppercase;
         text-decoration: none;
         line-height: 1;
         text-align: center;
         //margin-top: (50px - 17px)/2;
-        padding: 23px 23px;
+        padding: 24px 24px;
         &:active {
           color: @font-logo;
         }
         &:hover {
           color: @font-logo;
         }
+
       }
 
 
+    }
+  }
+}
+
+//.nav-list {
+//  ul {
+//    li {
+//      a {
+//
+//
+//      }
+//
+//
+//    }
+//  }
+//}
+
+.nav-social {
+  padding-left: 10px;
+  ul {
+    &:extend(.ul-unstyled);
+    li {
+      display: inline-block;
+      margin-left: 0px;
+      a {
+        font-size: 18px;
+        padding: 20px 15px;
+      }
+    }
+  }
+}
+
+.nav-search {
+
+  ul {
+    &:extend(.ul-unstyled);
+    li {
+      display: inline-block;
+      margin-left: 0px;
+      a {
+        font-size: 18px;
+        padding: 20px 15px;
+        color: #123f61;
+        -webkit-font-smoothing: antialiased;
+        text-shadow: none;
+      }
     }
   }
 }
