@@ -28,165 +28,222 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
-<header class="site-header">
-    <nav class="site-nav navbar">
-        <div class="container">
-            <div class="navbar-inner">
-                <a class="navbar-brand" href="#!">
-                    <!--<img src="assets/img/logo.png" alt="Heap">-->
-                    <span>Heap</span>
-                </a>
-                <div class="nav-list">
-                    <ul >
-                        <li><a href="#!" class="active">Новости</a></li>
-                        <li><a href="#!">Библиотека</a></li>
-                        <li><a href="#!">Уроки</a></li>
-                        <li><a href="#!">Реклама</a></li>
-                        <li><a href="#!">О нас</a></li>
+<main class="main-wrap">
+    <header class="site-header">
+        <nav class="site-nav navbar">
+            <div class="container">
+                <div class="navbar-inner">
+                    <a class="navbar-brand" href="#!">
+                        <!--<img src="assets/img/logo.png" alt="Heap">-->
+                        <span>Heap</span>
+                    </a>
+                    <div class="nav-list">
+                        <ul >
+                            <li><a href="#!" class="active">Новости</a></li>
+                            <li><a href="#!">Библиотека</a></li>
+                            <li><a href="#!">Уроки</a></li>
+                            <li><a href="#!">Реклама</a></li>
+                            <li><a href="#!">О нас</a></li>
 
-                    </ul>
-                </div>
-                <div class="nav-search">
-                    <ul class="navbar-nav navbar-right">
-                        <li><a href="#!"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
-                <div class="nav-social">
-                    <ul class="navbar-nav navbar-right">
-                        <li><a href="#!"><i class="fa fa-vk"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
+                    <div class="nav-search">
+                        <ul class="navbar-nav navbar-right">
+                            <li><a href="#!"><i  id="btn-search" class="fa fa-search btn--search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-social">
+                        <ul class="navbar-nav navbar-right">
+                            <li><a href="#!"><i class="fa fa-vk"></i></a></li>
+                            <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#!"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#!"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    </nav><!--end site-nav-->
-</header><!--end site-header-->
-<div class="container">
+        </nav><!--end site-nav-->
+    </header><!--end site-header-->
+    <div class="container">
 
-    <div  class="h-main">
+        <div  class="h-main">
 
-        <div class="row">
-            <div class="col-md-8">
-                <section class="main-article">     <!--main-article-->
-                    <article>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="main-inner">
-                                    <header>
-                                        <h2><a href="" class="mn-link">Инструкция: как перевестипроект
-                                            Django с SQLite на MySQL
-                                            без боли</a>
-                                        </h2>
-                                        <p class="main-subtitle"> Написал <a class="m-sub-autor" href="#!">Админ</a> в
-                                            <a href="#!" class="m-sub-cat">Базы данных</a> 3 Марта</p>
-                                    </header>
-                                    <p class="main-text">
-                                        SQLite3 является СУБД-движком по умолчаниюв Python
-                                        веб-фреймворке Django, а также, как сообщается на
-                                        официальном сайте проекта, самым часто используемым
-                                        движком в мире
-                                    </p>
-                                    <footer class="main-footer">
-                                        <ul>
-                                            <li><i class="fa fa-heart-o"></i><span>&nbsp&nbsp15</span></li>
-                                            <li><i class="fa fa-comment-o"></i><span>&nbsp&nbsp25</span></li>
-                                            <li><i class="fa fa-eye"></i><span>&nbsp&nbsp30</span></li>
+            <div class="row">
+                <div class="col-md-8">
+                    <section class="main-article">     <!--main-article-->
+                        <article>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="main-inner">
+                                        <header>
+                                            <h2><a href="" class="mn-link">Инструкция: как перевестипроект
+                                                Django с SQLite на MySQL
+                                                без боли</a>
+                                            </h2>
+                                            <p class="main-subtitle"> Написал <a class="m-sub-autor" href="#!">Админ</a> в
+                                                <a href="#!" class="m-sub-cat">Базы данных</a> 3 Марта</p>
+                                        </header>
+                                        <p class="main-text">
+                                            SQLite3 является СУБД-движком по умолчаниюв Python
+                                            веб-фреймворке Django, а также, как сообщается на
+                                            официальном сайте проекта, самым часто используемым
+                                            движком в мире
+                                        </p>
+                                        <footer class="main-footer">
+                                            <ul>
+                                                <li><i id="social" class="ic fa fa-heart-o"></i><span>&nbsp&nbsp15</span></li>
+                                                <li><i class="fa fa-comment-o"></i><span>&nbsp&nbsp25</span></li>
+                                                <li><i class="fa fa-eye"></i><span>&nbsp&nbsp30</span></li>
 
-                                        </ul>
-                                        <a href="#!">Читать далее&nbsp&nbsp<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                                    </footer>
+                                            </ul>
+                                            <a href="#!">Читать далее&nbsp&nbsp<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="" class="he-img"><img width="580" height="315" class="img-responsive" src="assets/img/articletitle2.jpg" alt=""  sizes="(max-width: 580px) 100vw, 580px"></a>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <a href="" class="he-img"><img width="580" height="315" class="img-responsive" src="assets/img/articletitle2.jpg" alt=""  sizes="(max-width: 580px) 100vw, 580px"></a>
+
+
+                            <div class="clearfix"></div>
+
+
+                        </article>
+                    </section> <!--end main article-->
+
+                    <section class="he-articles"> <!--articles-->
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <article>
+                                    <div class="article-entry">
+                                        dfdf
+
+                                    </div>
+                                </article>
                             </div>
-                        </div>
+                            <div class="col-md-4">
+                               <article>
+                                    <div class="article-entry">
+                                        dfdf
 
-
-                        <div class="clearfix"></div>
-
-
-                    </article>
-                </section> <!--end main article-->
-
-            </div>
-            <div class="col-md-4"> <!--sidebar-->
-                <aside>
-                    <section class="he-sidebar">
-                        <div class="sidebar-inner">
-                            <header>
-                                <h5>Лучшее за неделю</h5>
-                            </header>
-                            <div class="best-content">
-                                <ul>
-                                    <li><div class="img-content">
-
-                                        <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
                                     </div>
-                                        <h5><a href="#!">Открыта регистрация на Google Code Jam 2017</a></h5>
-                                        <p>Ежегодное соревнование программистов
-                                            Google Code Jam возвращается в 14 раз.
-                                            Регистрация уже открыта и продлится до 7 апреля.</p>
-
-                                        <div class="clearfix"></div>
-                                    </li>
-
-                                     <li><div class="img-content">
-
-                                        <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
-                                    </div>
-                                        <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
-                                        <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
-
-                                        <div class="clearfix"></div>
-                                    </li>
-                                    <li><div class="img-content">
-
-                                        <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
-                                    </div>
-                                        <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
-                                        <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
-
-                                        <div class="clearfix"></div>
-                                    </li>
-                                    <li><div class="img-content">
-
-                                        <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
-                                    </div>
-                                        <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
-                                        <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
-
-                                        <div class="clearfix"></div>
-                                    </li>
-                                    <li><div class="img-content">
-
-                                        <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
-                                    </div>
-                                        <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
-                                        <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
-
-                                        <div class="clearfix"></div>
-                                    </li>
-                                </ul>
+                                </article>
                             </div>
+                            <div class="col-md-4">
+                                <article>
+                                    <div class="article-entry">
+                                        dfdf
+
+                                    </div>
+                                </article>
+                            </div>
+
+
                         </div>
                     </section>
-                </aside>
+
+                </div>
+                <div class="col-md-4"> <!--sidebar-->
+                    <aside>
+                        <section class="he-sidebar">
+                            <div class="sidebar-inner">
+                                <header>
+                                    <h5>Лучшее за неделю</h5>
+                                </header>
+                                <div class="best-content">
+                                    <ul>
+                                        <li><div class="img-content">
+
+                                            <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
+                                        </div>
+                                            <h5><a href="#!">Открыта регистрация на Google Code Jam 2017</a></h5>
+                                            <p>Ежегодное соревнование программистов
+                                                Google Code Jam возвращается в 14 раз.
+                                                Регистрация уже открыта и продлится до 7 апреля.</p>
+
+                                            <div class="clearfix"></div>
+                                        </li>
+
+                                        <li><div class="img-content">
+
+                                            <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
+                                        </div>
+                                            <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
+                                            <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
+
+                                            <div class="clearfix"></div>
+                                        </li>
+                                        <li><div class="img-content">
+
+                                            <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
+                                        </div>
+                                            <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
+                                            <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
+
+                                            <div class="clearfix"></div>
+                                        </li>
+                                        <li><div class="img-content">
+
+                                            <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
+                                        </div>
+                                            <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
+                                            <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
+
+                                            <div class="clearfix"></div>
+                                        </li>
+                                        <li><div class="img-content">
+
+                                            <a href="#!"><img src="assets/img/articletitle_mini.gif" class="img-circle img-responsive center-block" alt=""></a>
+                                        </div>
+                                            <h5><a href="#!">Реактивное программирование на реальных примерах: подробное введение</a></h5>
+                                            <p>Обучение реактивному подходу в программировании — достаточно непростая вещь, и недостаток обучающих материалов только усугубляет этот процесс.</p>
+
+                                            <div class="clearfix"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
             </div>
+
+
+
+        </div>  <!--end container-->
+    </div>
+</main>
+<div class="search">
+    <a href="#!" id="btn-search-close" class="btn--search-close"><i  class="fa fa-times btn--search-close" aria-hidden="true"></i></a>
+    <form class="search__form" action="">
+        <input class="search__input" name="search" type="search" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+        <span class="search__info">Нажми enter для поиска или ESC что бы закрыть</span>
+    </form>
+    <div class="search__related">
+        <div class="search__suggestion">
+            <h3>Может вы ищите?</h3>
+            <p>#drone #funny #catgif #broken #lost #hilarious #good #red #blue #nono #why #yes #yesyes #aliens #green</p>
         </div>
+        <div class="search__suggestion">
+            <h3>Популярное среди поиска</h3>
+            <p>#broken #lost #good #red #funny #lala #hilarious #catgif #blue #nono #why #yes #yesyes #aliens #green #drone</p>
+        </div>
+    </div>
+</div><!-- /search -->
+<!--search-->
 
 
-    </div>  <!--end container-->
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/social.js"></script>
 </body>
 </html>

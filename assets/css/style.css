@@ -6903,6 +6903,17 @@ body {
 a:hover img {
   opacity: 0.9;
 }
+/* Reset Search Input */
+.search__input {
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.search__input:focus {
+  outline: none;
+}
+/* Links */
 .site-nav {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -7025,6 +7036,7 @@ a:hover img {
 .main-article article .main-inner footer ul li {
   display: inline-block;
   margin-left: 10px;
+  cursor: pointer;
 }
 .main-article article .main-inner footer ul li span {
   font-size: 12px;
@@ -7037,6 +7049,20 @@ a:hover img {
 }
 .main-article article .main-inner footer a:hover {
   color: #404955;
+}
+.main-article article .main-inner footer .ic:before {
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  opacity: 1;
+}
+.main-article article .main-inner footer .ic-move {
+  -webkit-transform: scale3d(2, 2, 0.1);
+  transform: scale3d(2, 2, 0.1);
+}
+.main-article article .main-inner footer .ic-move:before {
+  transition: opacity 1s;
+  opacity: 0;
 }
 .main-article article .he-img {
   display: block;
@@ -7114,6 +7140,19 @@ a:hover img {
   letter-spacing: 0.5px;
   line-height: 1.1;
   padding-bottom: 10px;
+}
+.he-articles {
+  padding: 20px 0;
+}
+.he-articles article {
+  clear: both;
+  background-color: #fff;
+}
+.he-articles article .article-entry {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  clear: both;
+  min-height: 0px;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -9452,4 +9491,216 @@ a:hover img {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+/* Layout for search container */
+.search {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+.js .search {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.js .search::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #2672a5;
+}
+.btn--search-close {
+  font-size: 2em;
+  position: absolute;
+  top: 1.25em;
+  right: 1.25em;
+  display: none;
+}
+.js .btn--search-close {
+  display: block;
+}
+.search__form {
+  margin: 5em 0;
+}
+.search__input {
+  font-family: inherit;
+  font-size: 10vw;
+  line-height: 1;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 75%;
+  padding: 0.05em 0;
+  color: #f0d87d;
+  border-bottom: 5px solid;
+}
+.search__input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #4a319e;
+}
+.search__input::-moz-placeholder {
+  opacity: 1;
+  /* Mozilla Firefox 19+ */
+  color: #4a319e;
+}
+.search__input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #4a319e;
+}
+.search__input::-webkit-search-cancel-button,
+.search__input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.search__input::-ms-clear {
+  display: none;
+}
+.search__info {
+  font-size: 90%;
+  font-weight: bold;
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  padding: 0.85em 0;
+  text-align: right;
+  color: #f0d87d;
+}
+.search__related {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  text-align: left;
+  pointer-events: none;
+}
+.search__suggestion {
+  width: 50%;
+}
+.search__suggestion:first-child {
+  padding: 0 2em 0 0;
+}
+.search__suggestion:last-child {
+  padding: 0 0 0 2em;
+}
+.search__suggestion h3 {
+  font-size: 1.35em;
+  margin: 0;
+  font-family: "PT Sans Narrow";
+}
+.search__suggestion h3::before {
+  content: '\21FE';
+  display: inline-block;
+  padding: 0 0.5em 0 0;
+}
+.search__suggestion p {
+  font-size: 1.15em;
+  line-height: 1.4;
+  margin: 0.75em 0 0 0;
+  font-family: "PT Sans Narrow";
+}
+/************************/
+/* Transitions 			*/
+/************************/
+.js .main-wrap {
+  position: relative;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.js .main-wrap--move {
+  -webkit-transform: scale3d(0.7, 0.7, 1);
+  transform: scale3d(0.7, 0.7, 1);
+}
+.js .main-wrap--move .btn--search {
+  pointer-events: none;
+  opacity: 0;
+}
+.js .search {
+  pointer-events: none;
+}
+.js .search--open {
+  pointer-events: auto;
+}
+.js .search::before {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.js .search--open::before {
+  opacity: 1;
+}
+/* Close button */
+.btn--search-close {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.search--open .btn--search-close {
+  opacity: 1;
+  color: #f0d87d;
+  font-size: 40px;
+}
+/* Search form with input and description */
+.search__suggestion,
+.search__info {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+  transition: opacity 0.4s, -webkit-transform 0.4s;
+  transition: opacity 0.4s, transform 0.4s;
+  transition: opacity 0.4s, transform 0.4s, -webkit-transform 0.4s;
+}
+.search--open .search__suggestion,
+.search--open .search__info {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: #f0d87d;
+}
+.search--open .search__suggestion:first-child {
+  transition-delay: 0.15s;
+}
+.search--open .search__suggestion:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.js .search__input {
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  background: transparent;
+}
+.js .search--open .search__input {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  transition-duration: 0.5s;
+}
+@media screen and (max-width: 40em) {
+  .btn--search-close {
+    font-size: 1.25em;
+  }
+  .search__suggestion {
+    font-size: 80%;
+    width: 100%;
+  }
+  .search__suggestion:nth-child(2),
+  .search__suggestion:nth-child(3) {
+    display: none;
+  }
 }
